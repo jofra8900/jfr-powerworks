@@ -91,6 +91,7 @@ docs/boveda.md             La carpeta de markdown donde vive el contexto.
 docs/preguntas.md          Lo que solo el cliente puede responder, en una fuente viva.
 docs/skills.md             Cuáles valen la pena y cuánto contexto cuestan.
 docs/ajustes.md            Los frenos: cuáles aflojar, cuáles no, y por qué.
+docs/infraestructura.md    La capa opcional: un PC de casa como servidor.
 scripts/delegar.ps1        Lanza la tarea delegada. Elige el modelo solo, según disponibilidad.
 scripts/monitor.ps1        Tablero en vivo: avance, archivos tocados, y el aviso de tope.
 scripts/skills_toggle.ps1  Prender y apagar skills sin borrarlas.
@@ -112,6 +113,18 @@ Las reglas que a mí me importan, y por qué cada una existe:
 - **Nada sensible a modelos gratuitos.** Algunos entrenan con lo que les mandas.
 
 Ninguna skill de terceros pasa por encima de esto. Una skill es texto que tu agente obedece: léela entera antes de instalarla.
+
+---
+
+## Una capa opcional: la torre
+
+Todo lo anterior corre en un portátil, sin servidor. Lo que sigue es lo que se montó después, cuando varias cosas tenían que correr aunque el portátil estuviera apagado: **un PC de escritorio que ya estaba en casa, encendido todo el día, con Docker.** En vez de alquilar un VPS. Cuesta la luz.
+
+Lo que vive ahí: un enrutador que encadena proveedores de modelos gratuitos con reserva, para que cuando uno agote su cuota el siguiente responda; **transcripción de voz en local**, porque un cliente real no te manda especificaciones sino notas de voz de tres minutos; y un agente 24/7 en construcción, que corre con esos modelos gratuitos y hace lo que no necesita que estés delante.
+
+Si no tienes una máquina así, el sistema funciona igual. Solo pierdes esas comodidades, y las dos primeras se reemplazan pagando.
+
+→ **[docs/infraestructura.md](docs/infraestructura.md)** — qué corre ahí, las trampas del enrutador, y los reemplazos si no tienes torre.
 
 ---
 
@@ -148,6 +161,8 @@ Lo que uso en cada rol, con dónde conseguirlo. Los precios cambian y varían po
 **El que lee.** No necesitas nada aparte: casi cualquier proveedor tiene un modelo pequeño y barato. Lo importante es que sea de solo lectura y devuelva extractos, no archivos completos.
 
 **La bóveda — [Obsidian](https://obsidian.md).** Gratis para uso personal. Es solo un visor de markdown con enlaces y buscador: los archivos son tuyos y los lee cualquier cosa. Para sincronizar entre máquinas, git con el plugin Obsidian Git, o el servicio de pago de Obsidian si prefieres no tocar git.
+
+**Para transcribir — [Whisper](https://github.com/openai/whisper), en local.** La forma cómoda es la [imagen de servicio](https://github.com/ahmetoner/whisper-asr-webservice): levantas un contenedor y le mandas el archivo. Gratis, no paga por minuto, y la voz de tus clientes no sale de tu máquina.
 
 **Para probar en el navegador — [agent-browser](https://github.com/vercel-labs/agent-browser).** Gratis, de Vercel Labs. Le da un navegador a cualquier agente desde la terminal y devuelve la página como texto, que cuesta mucho menos que una captura. Como es un comando, lo usan también los ejecutores, no solo el que razona.
 

@@ -13,7 +13,9 @@ Probé el camino contrario antes de quedarme con este. Las razones, en orden de 
 3. **Tú también la lees.** Obsidian te da buscador, enlaces y grafo. Una base vectorial no te deja leer tus propias notas un domingo.
 4. **Cuesta cero y no se cae.** No hay contenedor que vigilar ni embeddings que regenerar.
 
-Lo que pierdes: búsqueda semántica. En la práctica, `grep` sobre una bóveda bien nombrada resuelve casi todo, y para lo que no, un subagente barato busca y resume.
+Lo que pierdes: búsqueda semántica. Encontrar por significado y no por palabra exacta sí ahorra tokens, porque devuelve el párrafo en vez del archivo entero. Pero el mismo ahorro se consigue sin montar nada: **un subagente barato busca, lee y devuelve el extracto**, y el modelo caro solo ve ese extracto. El coste de leer se paga en tokens baratos.
+
+Conviene montarla cuando la bóveda crece tanto que ya no sabes qué palabra buscar, o cuando las preguntas son conceptuales y las notas usan otras palabras que tú. Antes de eso, es infraestructura que mantener a cambio de poco.
 
 **La regla que importa:** una sola fuente por dato. Si un hecho vive a la vez en la bóveda y en la memoria del agente, el día que cambie vas a tener dos versiones y ninguna marcada como falsa. Elige la bóveda.
 
