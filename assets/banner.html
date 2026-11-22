@@ -1,0 +1,34 @@
+<!doctype html>
+<!-- Fuente del banner. Para regenerar el PNG de 1280x640:
+     agent-browser viewport 1280 640 && agent-browser open file:///.../banner.html && agent-browser screenshot banner.png -->
+<html lang="es"><head><meta charset="utf-8"><title>jfr-powerworks</title><style>
+  html,body{margin:0;padding:0}
+  .banner{width:1280px;height:640px;background:#0d1117;color:#e6edf3;box-sizing:border-box;
+    padding:0 92px;display:flex;flex-direction:column;justify-content:center;
+    font-family:ui-monospace,SFMono-Regular,"Cascadia Mono",Consolas,monospace}
+  .name{font-size:66px;font-weight:700;letter-spacing:-.02em;margin:30px 0 0}
+  .tag{font-size:28px;line-height:1.45;color:#8b949e;margin:20px 0 0;font-weight:400}
+  .tag b{color:#e6edf3;font-weight:400}
+  .chain{margin-top:56px;display:flex;gap:13px;align-items:center;font-size:19px;color:#6e7681}
+  .chip{border:1px solid #30363d;border-radius:7px;padding:9px 17px;color:#c9d1d9}
+  .chip.hi{border-color:#1f6feb;color:#58a6ff}
+  .cost{margin-left:auto;color:#6e7681;font-size:19px}
+</style></head><body>
+<div class="banner">
+  <svg viewBox="0 0 64 64" width="78" height="78" fill="#e6edf3" aria-hidden="true">
+    <path d="M9 4h24a5 5 0 0 1 5 5v24a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V9a5 5 0 0 1 5-5Zm15 5-12 16h8l-3 11 13-15h-8l2-12Z"/>
+    <rect x="44" y="4" width="16" height="16" rx="3"/><rect x="44" y="26" width="16" height="16" rx="3"/>
+    <rect x="4" y="44" width="16" height="16" rx="3"/><rect x="26" y="44" width="16" height="16" rx="3"/>
+    <rect x="48" y="48" width="12" height="12" rx="3"/>
+  </svg>
+  <div class="name">jfr-powerworks</div>
+  <div class="tag">Dos máquinas, cinco modelos, una regla:<br><b>el caro no toca el teclado.</b></div>
+  <div class="chain">
+    <span class="chip hi">planea</span><span>&rarr;</span>
+    <span class="chip">ejecuta</span><span>&rarr;</span>
+    <span class="chip">ejecuta</span><span>&rarr;</span>
+    <span class="chip hi">revisa</span>
+    <span class="cost">US$30/mes</span>
+  </div>
+</div>
+</body></html>
