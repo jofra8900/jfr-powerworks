@@ -1,8 +1,6 @@
-<img src="assets/logo.svg" width="56" alt="">
+<img src="assets/banner.png" alt="jfr-powerworks — el caro no toca el teclado">
 
 # jfr-powerworks
-
-**Dos máquinas, cinco modelos, una regla: el caro no toca el teclado.**
 
 El sistema de agentes con el que trabajo todos los días. No es una lista de enlaces ni una plantilla teórica: son los archivos que están corriendo ahora mismo en mi torre y en mi laptop.
 
