@@ -17,6 +17,8 @@ Lo que pierdes: búsqueda semántica. Encontrar por significado y no por palabra
 
 Conviene montarla cuando la bóveda crece tanto que ya no sabes qué palabra buscar, o cuando las preguntas son conceptuales y las notas usan otras palabras que tú. Antes de eso, es infraestructura que mantener a cambio de poco.
 
+Y si llegas a ese punto, prueba primero lo que no obliga a montar un servicio: hay herramientas que construyen un índice o un grafo sobre tus propios archivos y se consultan desde el agente. La prueba honesta es comparar contra el subagente barato, con las mismas tres preguntas, midiendo tokens y aciertos. Si no gana con claridad, no vale la mantención.
+
 **La regla que importa:** una sola fuente por dato. Si un hecho vive a la vez en la bóveda y en la memoria del agente, el día que cambie vas a tener dos versiones y ninguna marcada como falsa. Elige la bóveda.
 
 ## Estructura
