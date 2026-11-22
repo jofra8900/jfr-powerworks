@@ -12,15 +12,22 @@ Un modelo caro razona bien y cuesta caro por token. Un modelo barato escribe có
 
 Así que el caro **planea y revisa**. Los baratos **ejecutan**. El caro nunca escribe el diff completo; lee el que le trajeron.
 
-| Quién | Motor | Para qué |
-|---|---|---|
-| Claude Code (Opus) | suscripción | Planear, decidir, revisar diffs, tocar producción |
-| Claude (Sonnet) | la misma, vía `opusplan` | Ejecutar dentro de la sesión lo que Opus planeó |
-| Subagente lector (Haiku) | la misma | Leer y buscar en decenas de archivos; devuelve solo el extracto |
-| OpenCode Go | US$10/mes | El trabajo mecánico: refactors, CRUDs, tests, scripts |
-| Antigravity (`agy`) | incluido en Google AI Pro | Segundo ejecutor y respaldo cuando el anterior se agota |
+## Roles, no marcas
 
-Costo real: **US$30 al mes**.
+Son cuatro puestos de trabajo. Cualquier herramienta que cumpla el puesto sirve: lo que importa es que estén los cuatro y que cada uno se quede en el suyo.
+
+| Rol | Qué necesita | Lo que uso yo |
+|---|---|---|
+| **El que razona** | Buen criterio y contexto largo. Caro por token, así que no escribe el diff | Claude Code con Opus, suscripción de US$20 |
+| **El que ejecuta** | Escribir código decente **si le das un plan exacto**. Barato o con tope mensual | OpenCode Go, US$10 |
+| **El de respaldo** | Otro proveedor, con otra cuota, para cuando el primero se agota | Antigravity (`agy`), de una suscripción que ya tenía por otra cosa |
+| **El que lee** | Lo más barato que exista. Lee decenas de archivos y devuelve solo el extracto | Un subagente Haiku, dentro de la misma suscripción del primero |
+
+Hay un quinto puesto opcional que sale gratis: el mismo proveedor del que razona suele tener un modelo intermedio que ejecuta dentro de la misma sesión lo que el caro planeó. En mi caso Sonnet, con `opusplan`.
+
+**Lo que cuesta:** US$20 del que razona más US$10 del que ejecuta. **US$30 al mes.**
+
+El de respaldo no entra en esa cuenta: viene de una suscripción que ya pagaba por otra cosa, y tiene sus propios planes y precios. Si no la tienes, el sistema funciona igual con los dos primeros; solo pierdes una cuota de reserva cuando se agote la principal.
 
 ---
 
@@ -123,6 +130,7 @@ Las dos que yo no aflojaría: una clave nunca va escrita dentro de un comando, p
 - No es un framework. No hay nada que importar.
 - No es una lista de enlaces a herramientas de otros.
 - No promete autonomía. Un humano revisa el diff antes de publicar.
+- No te dice qué herramientas usar. Esta es la configuración que me funciona a mí; las piezas se cambian.
 - No sirve tal cual: las rutas y las reglas son mías. Cópialas y cámbialas.
 
 ---
