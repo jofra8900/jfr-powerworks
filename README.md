@@ -1,3 +1,5 @@
+<img src="assets/logo.svg" width="56" alt="">
+
 # jfr-powerworks
 
 **Dos máquinas, cinco modelos, una regla: el caro no toca el teclado.**
@@ -36,6 +38,18 @@ La cadena baja sola: pago → gratis que no entrenan con tus datos → otro prov
 
 ---
 
+## Dónde vive el contexto
+
+Una carpeta de markdown, versionada con git, que se abre con Obsidian. Eso es toda la memoria del sistema: no hay base vectorial, ni servidor de contexto, ni servicio que mantener.
+
+En la raíz, `AGENTS.md`. Dentro, un tablero de pendientes que es la única fuente de qué falta, y un brief por proyecto con su **bitácora**: cada sesión escribe ahí qué hizo y qué queda, y la siguiente arranca leyéndola. Ese es el cable entre una sesión y la que viene.
+
+Los agentes leen markdown sin integración ni clave, git te da el historial auditable, y tú puedes leer tus propias notas un domingo. Lo que pierdes es búsqueda semántica; en la práctica `grep` y un subagente barato cubren el hueco.
+
+→ **[docs/boveda.md](docs/boveda.md)** — estructura, convenciones, el relevo, y cómo montarla.
+
+---
+
 ## El otro problema: el contexto
 
 Cada skill instalada mete su descripción en **todas** las sesiones, las use o no. Medido en mi configuración: 19 skills activas = ~2.100 tokens por sesión antes de escribir una palabra. Los plugins de video sumaban 20 skills más.
@@ -46,12 +60,18 @@ Cada skill instalada mete su descripción en **todas** las sesiones, las use o n
 .\skills_toggle.ps1 -Nombre differential-review -Accion on
 ```
 
+Y una skill es texto que tu agente obedece, así que elegirlas es decisión de seguridad, no de comodidad. Las que rinden son las oficiales del fabricante de lo que ya usas —ahí es donde un modelo barato más se equivoca— y las de proceso. Las bibliotecas de cientos de skills generadas en masa no entran.
+
+→ **[docs/skills.md](docs/skills.md)** — el presupuesto de contexto, qué revisar antes de instalar una, y qué descarté.
+
 ---
 
 ## Qué hay aquí
 
 ```
 AGENTS.md                  El contrato. Lo lee cualquier agente que llegue sin contexto.
+docs/boveda.md             La carpeta de markdown donde vive el contexto.
+docs/skills.md             Cuáles valen la pena y cuánto contexto cuestan.
 scripts/delegar.ps1        Lanza la tarea delegada. Elige el modelo solo, según disponibilidad.
 scripts/monitor.ps1        Tablero en vivo: avance, archivos tocados, y el aviso de tope.
 scripts/skills_toggle.ps1  Prender y apagar skills sin borrarlas.
