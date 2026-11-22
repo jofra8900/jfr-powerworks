@@ -135,6 +135,22 @@ Las dos que yo no aflojaría: una clave nunca va escrita dentro de un comando, p
 
 ---
 
+## Las piezas
+
+Lo que uso en cada rol, con dónde conseguirlo. Los precios cambian y varían por país: entra al enlace antes de decidir.
+
+**El que razona — [Claude Code](https://claude.com/claude-code).** El plan Pro de US$20 alcanza si delegas la ejecución; si no delegas, se te acaba a media tarde. Trae el modo donde el modelo caro planea y uno más barato ejecuta en la misma sesión, y subagentes para las lecturas.
+
+**El que ejecuta — [OpenCode](https://opencode.ai).** El [plan Go](https://opencode.ai/go) cuesta US$10 al mes y da acceso a unas 40 modelos abiertos y cerrados, con tope por ventana de 5 horas, semana y mes. Hay modelos gratuitos sin plan, útiles para probar, pero algunos entrenan con lo que les mandas: revísalo en su consola antes de pasarles código ajeno. La clave también funciona como API compatible con OpenAI, así que sirve fuera del CLI.
+
+**El de respaldo — [Antigravity CLI](https://antigravity.google/product/antigravity-cli).** Viene con las suscripciones de [Google AI Pro](https://one.google.com/about/google-ai-plans), que incluyen además almacenamiento y la app de Gemini. Hay varios niveles y los modelos disponibles cambian según cuál tengas, así que no todos los planes dan lo mismo en el CLI. Si ya pagas una por otra razón, el respaldo te sale sin costo adicional.
+
+**El que lee.** No necesitas nada aparte: casi cualquier proveedor tiene un modelo pequeño y barato. Lo importante es que sea de solo lectura y devuelva extractos, no archivos completos.
+
+**La bóveda — [Obsidian](https://obsidian.md).** Gratis para uso personal. Es solo un visor de markdown con enlaces y buscador: los archivos son tuyos y los lee cualquier cosa. Para sincronizar entre máquinas, git con el plugin Obsidian Git, o el servicio de pago de Obsidian si prefieres no tocar git.
+
+**Para probar en el navegador — [agent-browser](https://github.com/vercel-labs/agent-browser).** Gratis, de Vercel Labs. Le da un navegador a cualquier agente desde la terminal y devuelve la página como texto, que cuesta mucho menos que una captura. Como es un comando, lo usan también los ejecutores, no solo el que razona.
+
 ## Requisitos
 
 Windows con PowerShell 5.1, git, y los CLI que uses como ejecutores. Los scripts no tienen dependencias.
