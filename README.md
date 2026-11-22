@@ -46,7 +46,19 @@ En la raíz, `AGENTS.md`. Dentro, un tablero de pendientes que es la única fuen
 
 Los agentes leen markdown sin integración ni clave, git te da el historial auditable, y tú puedes leer tus propias notas un domingo. Lo que pierdes es búsqueda semántica; en la práctica `grep` y un subagente barato cubren el hueco.
 
+La regla que lo sostiene: **lo que se descubre en una sesión no se queda en la sesión.** Las conversaciones se borran; la carpeta no. Si una sesión averigua que un documento estaba equivocado o que el cliente trabaja distinto a lo que decía la nota, eso se escribe con fecha antes de cerrar.
+
 → **[docs/boveda.md](docs/boveda.md)** — estructura, convenciones, el relevo, y cómo montarla.
+
+---
+
+## Cuando el que sabe no eres tú
+
+En un proyecto grande lo que te frena no es el código: son las decisiones que solo puede tomar el cliente. Si esas preguntas viven dispersas en chats y correos, preguntas lo mismo dos veces, pierdes respuestas que llegaron por audio, y te sientas media hora con el cliente sin la lista de lo que de verdad te bloquea.
+
+Una sola fuente de preguntas, estructurada y viva. El documento que lee el cliente se **genera** desde ahí, nunca se escribe a mano. Y la regla: si un agente tiene una pregunta para una persona, va a ese archivo; si llega una respuesta, se registra antes de usarla.
+
+→ **[docs/preguntas.md](docs/preguntas.md)** — el formato, la regla y qué gana el trabajo.
 
 ---
 
@@ -71,7 +83,9 @@ Y una skill es texto que tu agente obedece, así que elegirlas es decisión de s
 ```
 AGENTS.md                  El contrato. Lo lee cualquier agente que llegue sin contexto.
 docs/boveda.md             La carpeta de markdown donde vive el contexto.
+docs/preguntas.md          Lo que solo el cliente puede responder, en una fuente viva.
 docs/skills.md             Cuáles valen la pena y cuánto contexto cuestan.
+docs/ajustes.md            Los frenos: cuáles aflojar, cuáles no, y por qué.
 scripts/delegar.ps1        Lanza la tarea delegada. Elige el modelo solo, según disponibilidad.
 scripts/monitor.ps1        Tablero en vivo: avance, archivos tocados, y el aviso de tope.
 scripts/skills_toggle.ps1  Prender y apagar skills sin borrarlas.
@@ -93,6 +107,16 @@ Las reglas que a mí me importan, y por qué cada una existe:
 - **Nada sensible a modelos gratuitos.** Algunos entrenan con lo que les mandas.
 
 Ninguna skill de terceros pasa por encima de esto. Una skill es texto que tu agente obedece: léela entera antes de instalarla.
+
+---
+
+## Nada de esto es sagrado
+
+Un sistema que te traba lo terminas esquivando, y un sistema que esquivas no protege nada. Todos los umbrales viven en texto plano y se cambian editándolos: cuándo delegar, cuándo cortar la sesión, cuánto piensa el modelo, qué se pregunta antes de hacer.
+
+Las dos que yo no aflojaría: una clave nunca va escrita dentro de un comando, porque el comando queda en un log que leen los modelos baratos a los que delegas; y lo que no se arregla con `git revert` se pregunta antes. El resto, a tu gusto.
+
+→ **[docs/ajustes.md](docs/ajustes.md)** — cada freno, dónde se mueve y qué ganas o pierdes.
 
 ---
 
