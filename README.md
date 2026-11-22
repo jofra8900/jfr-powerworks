@@ -101,6 +101,22 @@ mods/linea-ahorro/         Línea de estado: modelo, contexto, cuota y costo, co
 
 ---
 
+## Empieza aquí
+
+En orden, y cada paso sirve por sí solo. Si te quedas en el 2 ya ganaste la mitad.
+
+**1. La carpeta.** Crea una carpeta con git, pon un `AGENTS.md` en la raíz y un archivo de pendientes dentro. Usa la [plantilla](AGENTS.md) y borra lo que no apliques. Veinte minutos.
+
+**2. La costumbre.** Al cerrar cada sesión, que el agente escriba en la bitácora qué hizo, qué falta y dónde quedó. Esto es lo que más cambia y no cuesta nada: la sesión siguiente arranca sabiendo dónde está.
+
+**3. Delegar una tarea.** Elige algo mecánico y aburrido, escribe el plan con rutas exactas y criterios de aceptación, y pásaselo a un ejecutor barato. Revisa el diff tú. La primera vez saldrá regular; el problema casi siempre es que el plan era vago, no que el modelo sea malo.
+
+**4. Los frenos.** Cuando ya delegues seguido, pon los umbrales: cuándo se delega, cuándo se corta la sesión, qué se pregunta antes de hacer. Están en [docs/ajustes.md](docs/ajustes.md).
+
+Lo demás —apagar skills, la torre, el aviso de cuota— es afinado. Llega solo cuando te empiece a doler.
+
+---
+
 ## AGENTS.md: el contrato
 
 Un agente nuevo no sabe nada de tu proyecto y no debería preguntártelo todo. `AGENTS.md` vive en la raíz y responde tres cosas: dónde está el tablero de tareas, qué reglas no se negocian, y a quién se le delega qué.
@@ -147,20 +163,6 @@ Las dos que yo no aflojaría: una clave nunca va escrita dentro de un comando, p
 - No sirve tal cual: las rutas y las reglas son mías. Cópialas y cámbialas.
 
 ---
-
-## Empieza aquí
-
-En orden, y cada paso sirve por sí solo. Si te quedas en el 2 ya ganaste la mitad.
-
-**1. La carpeta.** Crea una carpeta con git, pon un `AGENTS.md` en la raíz y un archivo de pendientes dentro. Usa la [plantilla](AGENTS.md) y borra lo que no apliques. Veinte minutos.
-
-**2. La costumbre.** Al cerrar cada sesión, que el agente escriba en la bitácora qué hizo, qué falta y dónde quedó. Esto es lo que más cambia y no cuesta nada: la sesión siguiente arranca sabiendo dónde está.
-
-**3. Delegar una tarea.** Elige algo mecánico y aburrido, escribe el plan con rutas exactas y criterios de aceptación, y pásaselo a un ejecutor barato. Revisa el diff tú. La primera vez saldrá regular; el problema casi siempre es que el plan era vago, no que el modelo sea malo.
-
-**4. Los frenos.** Cuando ya delegues seguido, pon los umbrales: cuándo se delega, cuándo se corta la sesión, qué se pregunta antes de hacer. Están en [docs/ajustes.md](docs/ajustes.md).
-
-Lo demás —apagar skills, la torre, el aviso de cuota— es afinado. Llega solo cuando te empiece a doler.
 
 ## Las piezas
 
