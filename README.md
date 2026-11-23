@@ -92,10 +92,12 @@ docs/preguntas.md          Lo que solo el cliente puede responder, en una fuente
 docs/skills.md             Cuáles valen la pena y cuánto contexto cuestan.
 docs/ajustes.md            Los frenos: cuáles aflojar, cuáles no, y por qué.
 docs/infraestructura.md    La capa opcional: un PC de casa como servidor.
+docs/mcp.md                Darle ojos a la base sin darle las llaves.
 scripts/delegar.ps1        Lanza la tarea delegada. Elige el modelo solo, según disponibilidad.
 scripts/monitor.ps1        Tablero en vivo: avance, archivos tocados, y el aviso de tope.
 scripts/skills_toggle.ps1  Prender y apagar skills sin borrarlas.
 agents/lector.md           Subagente barato de solo lectura.
+agents/revisor.md          Subagente senior de solo lectura para revisar antes de publicar.
 mods/linea-ahorro/         Línea de estado: modelo, contexto, cuota y costo, con avisos.
 ```
 
