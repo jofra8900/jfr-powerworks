@@ -36,6 +36,8 @@ Una advertencia que cuesta aprender: **no pongas modelos de razonamiento al prin
 
 Hay un detalle que vale la pena anotar si haces lo mismo: algunos proveedores de pago exigen cabeceras propias además de la clave, y un cliente genérico compatible con OpenAI no las manda. Si recibes un error 400 con todo bien configurado, es por ahí.
 
+Y otra lección de uso diario: **no metas un proxy o daemon en `127.0.0.1` delante del arnés principal cuando el proveedor de respaldo ya expone un endpoint compatible directo** (como `/anthropic`). Un daemon local caído o un puerto muerto (`127.0.0.1:3456` → `Connection refused`) deja paralizadas incluso las verificaciones de permisos y rompe sesiones interactivas; es más simple conmutar variables de entorno en un wrapper de proceso al arrancar.
+
 ## Transcripción: el cliente manda audios, no texto
 
 Un cliente real no te escribe especificaciones. Te manda notas de voz de tres minutos por WhatsApp, y ahí dentro va la decisión que estabas esperando.

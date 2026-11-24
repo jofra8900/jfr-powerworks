@@ -16,7 +16,8 @@ Si eres un agente que llega sin contexto, porque otro se quedó sin cuota o la s
 - **No borrar** nada de forma permanente sin mostrarlo y preguntar. Preferir la papelera.
 - **Datos sensibles** (clientes, sueldos, salud): nunca en modelos gratuitos de terceros. Varios entrenan con lo que reciben. Usar solo proveedores de pago sin retención.
 - **Producción:** probar primero, con la transacción revertida o en una copia borrable, y pedir permiso para aplicar.
-- **Al trabajar en un brief:** al final de cada sesión, agregar en su sección "Bitácora" qué se hizo, qué falta y dónde quedaron los archivos. Commit y push.
+- **Al trabajar en un brief:** al final de cada sesión, agregar en su sección "Bitácora" qué se hizo, qué falta y dónde quedaron los archivos.
+- **Publicar en GitHub (`skills/publicar-git`):** el agente prepara el commit limpio (sin líneas `Co-Authored-By` de IA) y **nunca** ejecuta `git push` ni crea PRs; entrega a la persona el comando exacto listo para copiar y pegar.
 
 ## Delegación
 

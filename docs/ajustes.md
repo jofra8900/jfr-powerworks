@@ -62,3 +62,13 @@ Lo importante no es dónde pongas la línea. Es que esté escrita, con fecha y m
 Todo esto es la misma tensión: más contexto y más verificación dan mejor calidad y cuestan más. La respuesta no es un número fijo, es **poner el gasto donde cambia el resultado**.
 
 Pensar mucho antes de tocar producción, sí. Pensar mucho para renombrar una variable, no.
+
+## Autoría limpia y control de `git push`
+
+Por defecto, algunos CLI de agentes agregan `Co-Authored-By: ...` en cada commit o ejecutan `git push` directo si tienen permisos. En repositorios públicos y de clientes conviene separar la preparación (del agente) de la publicación (tuya):
+
+1. En `settings.json` de Claude Code:
+   - `"attribution": { "commit": "", "pr": "" }` quita las firmas automáticas de IA en commits y PRs (`includeCoAuthoredBy` quedó deprecado).
+   - `"permissions": { "deny": ["Bash(git push*)", "Bash(git -C * push*)", "Bash(gh pr create*)", "Bash(gh pr merge*)"] }` impide técnicamente que el agente publique al remoto sin bloquear `commit`, `diff` o `status`.
+2. Con `skills/publicar-git/SKILL.md`, cuando el trabajo está probado, el agente deja el commit preparado y te entrega el bloque exacto para revisar y ejecutar en tu terminal.
+3. Si conectas un modelo de respaldo con API `/anthropic` directa (como DeepSeek) y el planificador pesado tiene riesgo de quedarse colgado en razonamiento largo, fija `API_TIMEOUT_MS` (p. ej. `180000` ms) para cortar antes del tope de 10 min y pasar el plan a otro proveedor de respaldo.

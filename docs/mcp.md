@@ -6,7 +6,7 @@ Un agente que no puede consultar la base te hace leerle los datos a mano. Uno co
 
 Son dos cosas distintas y se confunden seguido:
 
-- **El enrutador de modelos** (`claude-code-router` y similares) decide *qué modelo* responde. No aporta herramientas.
+- **El enrutador de modelos** (un proxy local de modelos) decide *qué modelo* responde. No aporta herramientas.
 - **El MCP** le da *herramientas* al agente: leer una tabla, abrir un archivo, manejar un navegador. Lo lanza el cliente (Claude Code, Codex, el que sea), no el enrutador.
 
 Por eso configurar el enrutador no arregla un MCP que falla. Son tuberías separadas.
